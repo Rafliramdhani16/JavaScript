@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrayKosong=[];
+
+        let ArrayNama=["Rafli", "Ramdhani"];
+        
+        // kode menambah array
+        const name=[];
+        // ini data ke 0
+        name.push("Budi");
+        // ini data ke 1 dan 2
+        name.push("jancok", "darwin");
+
+        console.table(name);
+
+        console.info(name[0]);
+        console.info(name[1]);
+        console.info(name[2]);
+
+        name[0]="programmer";
+
+        console.table(name);
+        delete name[1];
+
+        name.push("Budi lagi");
+        console.table(name);
+
+        // contoh array didalam array
+        name.push(["rafli","ramdhani"]);
+        console.table(name);
+        
+        
+
+    </script>
+</body>
+</html>

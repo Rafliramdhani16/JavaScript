@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function dimasukan kedalam object
+
+        // function sayHello(name){
+        //     alert(`hello ${name}`);
+        // }
+
+        // const person = {
+        //     name: "Rafli",
+        //     sayHello: sayHello
+        // }
+        // person.sayHello('Rafli');
+
+            // lebi  simpel
+        // const person = {
+        //     sayHello: function (name){
+        //         alert(`Hello ${name}`);
+        //     }
+        // }
+        // person.sayHello('Rafli');
+
+        // menambahkan method ke object
+        const person ={
+            name: "rafli"
+        };
+        
+        person.sayHello = function (name){
+            alert(`Hello ${name}`);
+        }
+        person.sayHello('Budi')
+    </script>
+</body>
+</html>

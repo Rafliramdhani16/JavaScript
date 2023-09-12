@@ -1,0 +1,478 @@
+escape sequence
+merupakan karakter khusus 
+
+\n ==> ENTER
+\t ==> TAB
+\' ==> '
+\" ==> "
+\\ ==> \
+
+
+operator aritmatia 
+
++ = tambah
+- = penggurangan
+* = perkalian
+** = exponensial ==> contoh 1 pangkat 2
+/ = pembagian
+% = sisa bagi ==> module
+
+operator augmented assignments 
+
+operator Matematika 
+
+result = result +10 maka bisa di singkat jadi (result += 10)
+agar mempersimpel tampilan agar tidak ribet kalian tuh gaesks
+
+
+unary operator yang biasa cukup membutuhkan 2 data
++ ==> menandakan positif(defaultnya sudah positif)
+- ==> menandakan bilangan negatif
+++ ==> increment, menaikan 1 angka
+-- ==> decrement, menurunkan 1 angka
+
+
+operator perbandingan 
+> ==> lebih dari
+< ==> kurang dari
+>= ==> lebih dari sama dengan
+<= ==> kurang dari sama denga
+== ==> sama dengan
+=== ==> sama dengan dan sama tipe
+!= ==> tidak sama dengan
+!== ==> tidak sama dengan atau tidak sama tipe
+
+
+operator logika
+
+&& ==> dan
+|| ==> atau
+! ==> kebalikan
+
+operator && 
+
+nilai 1     operator    nilai2      hasil
+
+true        &&          false       True
+true        &&          false       false
+false       &&          true        false
+false       &&          false       false
+
+
+operator atau ||
+
+nilai1      operator    nilai2      hasil
+
+true        ||          true        true  
+true        ||          false       true
+flase       ||          true        true
+false       ||          false       false
+
+
+
+operator kebalikan ! unery
+
+operator        nilai2       hasil
+
+!               true         false
+!               false        true
+
+
+console adalah untuk melakukan logging, agar dapat menampilkan informasi dari aplikasi yang sedang berjalan tanpa harus mengganggu alur kerja aplikasi dan juga interaksi user (debugging mencaari bug)
+
+console.info(...) ==> memberikan informasi
+console.warn(...) ==> memberikan informasi perinngatan
+console.error(...) ==> memberikan peringan error
+console.table (...) ==> memberikan informasi dalam bentuk table
+
+konversi string dan number
+
+function                keterangan
+
+parselnt (Sring)        mengkonversi dari string ke number(bilangan bulat)
+parseFloat (String)     mengkonversi dari string number (bilangan pecahan)
+number(String)          mengkonversi dari string ke number(bilangan bulat atau bilangan pecahan)
+number.toString()       mengkonversi dari number ke string
+
+NaN(Not a Number)
+
+ini adalah kejadian jika konversi data bukan data yang valid maka NaN artinya bukan number, NaN adalah number spesial
+
+function pengecekan isNaN{}
+
+tipe data array adalah tipe data yang berisikan kumpulan data memliki sifat dinamis artinya datanya bisa beratmbah
+ dengan sendirianya saat memasukan data ke dalam data array
+
+cara kerja array 
+
+- setiap data di array disimpan dalam posisi berurutan dimana urutan pertama dimulai dari 0 seperti bensin
+- setiap menambah data ke array otoamatis data akan disimpan di urutan terakhir 
+- urutan di array kita sebut dengan index
+
+operasi di array
+
+operasi                     Keterangan
+array.push(value)           menambah data ke array
+array.length                untuk menamdapatkan panjang array
+array[index]=value          mengubah data di posisi index
+delete array[index]         menghapus data di posisi index, namun index tidak bergeser
+
+contoh delete jadi misal 0,1,2,3,4 maka arraynya semisal ilang 1 ya 1 ae ga geser jadi 0,1,2,3,
+
+perlu diingat 
+data di dalam array tidak ada batasannya harus data apa
+jadi kita bisa memasukan data apa saja ke dalam array
+bahkan kita juga bisa memasukan array ke dalam array jika kita mau
+
+tipe data objek ==> yang mirip dengan tipe data array bisa string atau number
+
+assosiative array 
+
+if expression
+dalam javascript if adalah salah satu kunci yang digunakan untuk percabangan
+percabangan artinya kita bisa mengeksekusi kode pemogram tertentu ketika suatu kondisi terpenuhi
+hampir di semua bahasa pemograman mendukung if expression
+
+else expression
+blok if akan dieksekusi ketika kondisi if bernilai true
+kadang kita ingin melakukan eksekusi perogram tertentu jika kondisi if false
+hal ini bisa dilakukan menggunakan else expression
+
+
+else if expression
+kadang dalam if kita butuh beberapa kondisi
+kasus seperti ini di JS kita bisa menggunakan else if expression
+
+POP UP 
+alert,prompt, dan confirm
+alert digunakan untuk perinngatan berupa popup di browser
+prompt digunakan untuk meminta input dari pengguna browser dalam bentuk popup input text
+confirm digunakan untuk meminta input boolean dari pengguna browser dalam bentuk popup input pilihan
+
+
+undifined kata kunci di JS ini merupakan tipe data biasanya mereperesentasikan data yang belum di definisikan
+contoh sebuah variable yang belum ditambahkan nilai, maka artinya variable tersebut merupakan tipe data undifined
+kadang untuk programmer JS pemula undifined ini memang aga sedikit memusingkan soalnya undifined berbeda dengan null
+dibahasa pemograman lain
+
+
+null
+null merupakan reperesntasi data kosong
+null berbeda dengan undefined, null berarti variable sudah ditambahkan valuenya hanya saja valuenya null
+sedangkan undefined adalah variable berlum ditambahkan value apapun
+
+switch statment 
+kadang kita hanya butuh menggunakan kondisi sederhana di if statment, seperti hanya menggunakan perbandingan ==
+switch adalah statment percabangan yang sama dengan if namun lebih sederhana cara pembuatannya
+kondisi di switch statment hanya untuk perbandingan ==
+
+operator typeof
+typeof merupakan operator yang bisa kita gunakan untuk melihat tipe data sebuah value atau variable
+karena js merupakan dynamic languagge, jadi kadang kita perlu mengecek tipe data sebuah value atau variable menggunakan operator typeof
+hasil dari operator typeof adalah string tipe datanya
+
+
+type                    Hasil operator typeof
+
+undefined               "undefined"
+null                    "objek"
+boolean                 "boolean"
+number                  "number"
+bitlnt                  "bigint"
+string                  "string"
+symbol                  "symbol"
+function                "function"
+lainya                  "objek"
+
+
+inoperator
+in operator adalah operator yang bisa dilakukan untuk mengecek apakah sebuah property ada di dalam objek atau tidak
+jika property tersebut adad di objek maka hasilnya true sedangkan jika tidak maka hasilnya false
+tidak hanya di objek in juga bisa digunakan untuk mengecek index array
+perinngatan
+in operator hanya akan mengecek apakah sebuah property atau index ada atau tidak
+jadi walaupun nilai property atau indexnya undefinned atau null maka akan tetap dianggap ada
+
+ternary operator
+adalah operator sederhana dari if statment
+ternary operator terdiri dari kondisi yang dievaluasi, jika menghasilkan true makan nilai pertama diambil, jika false, maka nilai kedua diambil
+
+nullish coalescing operator 
+nullish adalah null dan undefined
+nullish coalescing operator (??) adalah operator mirip dengan ternary operator, yang membedakan adalah pada kondisi, jika bernilai null atau undefined, baru valuenya diambil
+
+
+optional chaining operator (?) merupakan operator yang digunakan untuk mengamankan ketika kita ingin mengakses property sebuah object dari data nullish
+jika kita ingin mencoba mengakses property dari sebuah obejek dari data nullish tanpa mengguunakan optional chaining operator, maka akan terjadi error
+
+
+falsy atau kadang ditulis falsey, adala value yang ketika dalam konteks boolean, dia dianggap false
+ini adalah salah satu fitur unik dari java script, yang berguna,namun kadang juga sering membingugkan'
+jadi JS, kondisi itu tida hanya bisa boolean, tapi diluar boolean pun bisa, namun kita harus tahu beberapa falsy, atau dianggap false
+
+data falsy 
+
+data dianggap falsy                 keterangan
+
+
+false                               boolean false
+0,-0                                number 0 dan -0 dianggap false
+"", '', ``                          semua string kosong maka dianggap false
+null                                null dianggap false
+undefined                           undefined dianggap false
+NaN                                 Not a Number dianggap false
+
+
+truthy adalah kebalikan dari falsy, dimana data dianggap selain fasly itu bernilai true
+sederhana sekali sebenernya untuk mengetahui sebuah data itu adalah truthy yaitu data yang bukan bernilai falsy
+
+operator logika di non boolean
+sebelumnya kita sudah tau bahwa operator logika AND (&&) dan OR (||) digunkan untuk dua data boolean 
+namun berbeda di javascript, kita bisa menggunakan operator logika AND dan OR untuk tipe data non boolean
+
+operator OR (||) yang di non boolean
+operator logika OR , membaca dari kiri ke kanan.
+operator ini akan mengambil nilai pertama yang truthy
+jika tida ada satupun yang bernilai truthy, maka yang terakhir yang akan diambil
+operator or sering digunakan oleh user JS brow
+
+
+Operator AND (&&) di non boolean
+operator logika AND (||), membaca dari kiri ke kanan
+operator ini akan mengambil nilai pertama yang falsy
+jika tidak ada satupun yang bernilai falsy, maka yang terakhir yang akan diambil
+
+for loop
+for adalah salah satu kata kunci yang bisa digunkan untuk melakukan perulangan
+blok kode yang terdapat di dalam for akan selalu diulangi selama kondisi for terpenuhi
+
+sintak perulangan for
+for (ini statment;kondisi;post statment){
+    //block perulangan
+}
+
+init statment akan dieksekusi hanya sekali di awal sebelum perulangan
+kondisi akan dilakukan pengecekan dalam setiap perulangan, jika true perulangan akan dilakukan, jika false perulangan akan berenti
+post statment akan dieksekusi setiap akhir perulangan
+init statment, kondisi, dan post statment tidak wajib diisi, jika konidisi tidak diisi, berarti kondisi selalu bernilai true
+
+while loop
+while loop adalah versi perulangan yang lebih sederhana dibanding for loop
+di while loop. hanya terdapat kondisi perulangan, tanpa ada init statment dan post statment
+
+do while loop
+do while loop adlah perulangan yang mirip dengan while
+perbedaanny hanya pada pengecekan kondisi 
+pengecekan kondisi while loop dilakukan di awal sebelum perulangan dilakukan, sedangkan di do while loop dilakukan setelah perulangan dilakukan
+oleh karena itu dalam do while loop, minimal pasti sekali dilakukan walaupun kondisi tidak bernilai True
+
+
+break dan continue
+pada swirtch statment, kita sudah mengenal kata kunci break, yaitu untuk menghentikan case dalam switch
+sama dengan pada perulangan break juga digunakan untuk menghentikan seluruh perulangan.
+namun berbeda dengan continue, digunakan untuk mengehentikan perulangan saat ini, lalu melanjutkan ke perulangan selanjutnya
+
+
+LABEL
+label merupakan penanda yang bisa digunakan dengan kata kunci break dan continue
+secara default saat kita melakukan break atau continue, dia akan melakukan terhadap perulangan dimana kode break dan continue itu digunakan
+dengan menggunakan label, kita bisa melakukan break dan continue terhadap perulangan yang kita inginkan, asalkan perulangannya kita gunakan label
+untuk membuat label, kita bisa gunakan nama label lalu diikuti dengan : (titik dua)
+(jarang digunakan)
+
+FOR in
+for in merupakan perulangan for yang digunakan untuk mengiterasi seluruh data property di object atau index di array
+
+walaupun for in bisa digunakan untuk array, namun tidak di rekomendasikan untuk array, karena biasanya kita jarang sekali butuh data
+index untuk array, kita bisa menggunakan for of(yang dibahas setelah ini)
+
+FOR of
+jika for in digunakan untuk melakukan iterasi property atau index, berbeda dengan for of, ini digunakan untuk melakukan iterasi
+terhadap isi value dari iterable object, seperti array,string, dan lain-lain
+
+for of tidak bisa digunakan untuk melakukan iterasi data di objek, karena objek bukanlah iterable
+
+with statment
+with statment merupakan fitur yang digunakan untuk menurunkan sebuah scope data
+dengan meggunakan with statment, kita bisa mengakses property dalam sebuah data tanpa harus menyebut datanya
+tapi with statment tidak di rekomendasikanwalaupun fitur with statment ini sangat menarik
+namun kebanyakan orang tidak merekomendasikan penggunaan with statment 
+hal ini dikarenakan with statment kadang membuat sebuah kode menjadi ambigu
+
+function
+function adalah blok kode program yang akan berjalan saat kira panggil
+sebelumnya kita sudah menggunakan function writeln()untuk menampilkan tulisan di html
+untuk membuat function, kita bisa menggunakan kata kunci function, lalu diikuti dengan nama function, kurung() dan diakhiri dengan block kurung {}
+kita bisa memangil function dengan menggunakan nama function lalu diikuti dengan kurung()
+dibahsa pemograman lain, function juga disebut dengan method
+
+function parameter
+kita bisa mengirim informasi ke function yang kita ingin kita panggil
+untuk melakukan hal tersebut , kita perlu menambahkan parameter atau argument di function yang telah kita buat 
+parameter ditempatkan di dalam kurung() di dekalarasi method
+parameter bisa lebih dari satu, jika lebih dari satu, harus dipisah menggunakan tanda koma
+
+function return value
+secara default, function itu tidak mengahsilkan value apapun, namun jika kita ingin, kita bisa membuat, sebuah functin mengembalikan value
+agar function bisa menghasilkan value, untuk kita bisa menggunakan kata kunci return di dalam functionnya
+dan di dalam didalam block function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata kunci return,
+lalu di ikuti dengan data yang ingin kita hasilkan
+function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data sekaligus, kita bisa menggunakan array sebagai return valuenya
+Menghentikan Eksekusi dengan RETURN 
+saat menggunakan kata kunci return, maka kode setelah return tersebut tidak akan di eksekusi
+kita bisa menggunakan return untuk menghentikan eksekusi sebuah function
+
+optional parameter
+secara default, parameter di function itu optional
+artinya kita tidak wajib mengisi valuenya ketika memanggil function
+jika tidak ada value yag kita kirim ke parameter ketika memanggil function, maka secara otomatis parameter tersebut bernilai undefined
+
+default parameter
+sekarang kita tahu bahwa parameter itu opsional, artinya kita tidak memberi value terhaddap parameter
+parameter juga bisa kita beri default value, artinya jika ketika kita tidak mengirim data ke parameter
+atau kita mengirim data undefined, maka secara otomatis parameter akan diisi oleh default value.
+
+REST parameter
+rest parameter adalah fitur dimana kita bisa mengirim data sebanyak banyaknya pada satu parameter, dan secara otomatis akan di konversi menjadi array
+untuk membuat rest parameter ada ketentuannya
+rest parameter hanya boleh ada di satu function, tidak boleh dari satu function
+rest parameter hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah,keccuali memang cuma ada 1 parameter
+di bahasa pemograman lain, ada juga yang bilang ini adalah variable argument
+
+spread syntax
+kadang kita terlanjur memliki data berupa array
+tapi untungnya kita juga bisa mengirim array ke rest parameter
+kita bisa gunakan ... (titik 3x) diikuti denhgan array nya ketika memanggil function
+fitur ini dinamakan spread syntax
+
+function sebagai value
+function tidak hanya bisa digunakan sebagai kode program yang dieksekusi, tapi bisa juga sebagai value
+artinya, function bisa disimpan di variable, bisa juga dikirim melalui parameter ke function lainya
+
+anonymus function
+sebelumnya kita selalu membuat function dengan nama
+kita juga bisa membuat function tanpa nama function, atau istilahnya adalah anonymus function 
+kita bisa anonymus function dalam sebuah variable atau bisa juga kita bbuat ketika mengisi parameter
+
+function di dalam function 
+tidak ada batasan dimana kita bisa membuat function
+ttermasuk jika kita ingin membuat function dalam sebuah function, kita bisa melakukannya
+termasuk jika kita ingin membuat function di dalam function, kita bisa melakukannya
+function yang terdapat di dalam, kita sebut inner function
+inner function hanya bisa di akses di tempat kita membuat functionnya, tidak bisa diakses dari luar functionnya
+
+scope
+scope merupakan area akses sebuah data
+ada dua jenis scope, global scope dan local scope.
+setiap kita membuat function, maka kita akan membuat local scope untuk function tersebut
+data di global scope bisa diakses dari local scope, namun data di local scope hanya bisa diakses di local scope tersebut atau scope
+local dibawahnya(dalam kasus function dalam function)
+
+recursive function 
+recursive function adalah kemampuan function memeanggil function dirinya sendirianya
+kadang memang ada banyak problem, yang lebih mudah diselesaikan menggunakan recursive function, seperti contohnya kasus factorial
+
+function generator
+function generator adalah function yang digunakan untuk membuat data generator
+generator adalah data yang bisa di interasi seperti array
+untuk membuat function generator, kita perlu menggunakan tanda *(bintang) setelah kata function
+dan untuk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya
+
+lazy evaluation
+generator itu sifatnya lazy
+jadi artinya jika tidak ada data belum kita ambil dari generator, maka yield tidak akan di eksekusi
+
+arrow function
+arrow function adalah alternatif pembuatan function yang lebih sederhana dari function biasanya
+namun terdapat llimitasi dan juga tidak bisa digunkan di semua situasi
+dinamakan arrow function karena menggunkaan tanda => (seperti panah)
+berikut contoh beberapa kekurangan arrow function:
+1. tidak memiliki fitur argument object
+2. tidak bisa menggunakan function generator
+3. tidak bisa mengakses this
+4. tidak bisa mengakses super 
+
+arrow function tanpa block
+jikalau sebuah arrow function isinya sangat sederhana, misal hanya satu baris
+kita bisa membuat arrow function tanpa harus menggunakan block
+
+arrow function tanpa kurung parameter
+jika parameter di arrow function hanya satu, kita bisa tidak menggunakan kurung pada parameter
+
+arrow function sebagai parameter 
+karena arrow function mirip seperti anonymus function
+jadi kita juga bisa menggunakan arrow function sebagai parameter di function lain
+
+closure
+adalah kombinasi function dan bundel referensi ke data di sekitarnya
+aga membingungkan memang, apalagi yang baru pertama kali belajar
+kita sudah tahu bahwa local scope tidak bisa di akses di luar scopenya
+dengan kemampuan closure , kita bisa membuat sebuah function di local scope dan referensi ke data skitar local scope tersebut, ke luar scopenya
+
+objek method
+pada tipe data objek kita sudah membahas tentang property d object
+karena sebenernya function juga merupakan salah satu tipe data, function pun sebenernya bisa ditambahkan sebagaoi property di object
+cara pembuatannya pun sama dengan function sebaagai value
+function di object kadang disebut juga sebagai object method
+
+kata kunci this
+kata kunci this adalah referensi object milik siapa 
+tiap lokasi kata kunci this, bisa berbeda beda referensi pemiliknya
+dalam object method, this merupakan referensi ke object pemilik functionnya
+di global scope, this merupakan referensi ke global object (di browser biasanya window)
+di function, this merupakan referensi ke global object(di browser biasanya window)
+di function dengan strict mode( akan dibahas nanti). this adalah undefined
+dalam event, this merupakan referensi ke element yang menerima event(dibahas di materi document object model)
+
+arrow  function di object
+sebelumnya kita sudah bahas tentang arrow function
+arrow function juga bisa kita gunakan di sebagai object method
+namun perlu diketahui, arrow function tidak bisa digunkan untuk mengakses arguments object, 
+function generator, kata kunci this dan kata kunci super
+jadi pastikan gunakan arrow function hanya memang ketika kita tidak butuh fitur fitur diatas
+
+getter dan setter
+getter dan setter adalah kemampuan membuat function yang berbeda untuk mengambil data(getter) dan mengubah data (setter) pada sebuah property
+di object
+dengan menggunakan getter dan setter, kita bisa melakukan hal apapun dalam function sebelum sebuah property di akses atau diubah, misal menambah validasi dan lain-lain
+
+masalah varibale var
+sebelumnya sudah dijelaskan penggunaan var sudah tidak direkomendasikan lagi dan diganti dengan let 
+alasannya var tidak direkomendasikan digunakan lagi adalah, karena var tidak memiliki block scope, artinya dia tidak mengikat local
+scope yang sebelumnya sudah kita bahas
+karena masalah ini, var bisa tidak terprediksi
+
+destructuring
+destructuring adalah fitur yang bisa digunakan untuk membongkar value-value di arry atau object ke dalam variable-variable
+fitur ini sangat mempermudah kita ketika ingin mengambil data dari array atau object tanpa harus melakukan pengambilan data satu persatu
+
+destructuring function parameter
+destructuring tidak hanya bisa dilakukan di variable, tapi juga bisa dilakukan di function parameter
+hal ini membuat kita mudah ketika ingin mengambil nester data dalam array atau object dalam function
+
+default value
+yang paling menarik di distructuring adalah, kita bisa menambahkan default value
+jadi misal kita melakukan destructuring terhadap array, ternyata tidak ada datanya, maka kita bisa menambhakan default value
+begitu juga pada object, jika ternyata property nya tidak ada, maka kita bisa melakukan default value
+
+
+Menggunakan nama variable lain
+saat melakukan destructuring di array, kita bisa dengan mudah membuat nama variable sesuka kita
+namun pada saat melakukan destructuring, kita harus membuat nama variable sama dengan nama property
+kita juga bisa menggunakan nama variable lain saat melakukan destructuring object jika kita mau
+
+strict mode
+saat kita menjalankan kode program javascript, secara default kode program kita berjalan dalam mode tidak strict, atau istilahnya sloppy mode
+pada ECMAScript 5, diperkenalkan mode strict, dimana ketika strict mode dijalankan, maka akan merubah beberapa cara kerja di javascript, seperti:
+1. merubah beberapa javascript error dari yang tadinya silent error, menjadi throw error(terlihat)
+2. memperbaiki beberapa kesalahan engine javascript untuk optimasi
+3. menoalk beberapa kode perintah yang kedepannya akan digunakan
+Cara menyalakan strict mode
+untuk menyalakan strict mode, kita bisa menambahkan `use strict` pada baris awal file javascript kita
+atau bisa juga ditambahkan di function awal kita
+
+debugger 
+debugger digunakan untuk melakukan proses debuging 
+debungging adalah proses mencari bug(masalah) yang biasa terjadi di kode program kita
+dengan debugger kita bisa menghentikan kode program di posisi yang kita inginkan(breakpoint).
+lalu melihat semua isi variable yang ada pada saat kode program sedang berenti

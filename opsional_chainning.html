@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // kode error mengakses property nullish
+        const person = {
+            addres: {
+                country : "Indonesia"
+            }
+        };
+        let country = person?.addres?.country;
+        
+
+        // if(person.addres !== undefined && person.addres !== null){
+        //     country = person.addres.country;
+        // }
+
+        
+
+        document.writeln(`SUKSES`);
+        document.writeln(`<p>${country}</p>`);
+        document.writeln(`SUKSES`);
+
+    </script>
+</body>
+</html>

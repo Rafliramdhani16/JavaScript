@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const orang = {
+            "nama lengkap" : "Rafli Ramdhani",
+            alamat: "Bandung",
+            umur : "19"
+        };
+
+        // menambah atau mengubah
+        // orang["nama"] = "Rafli Ramdhani";
+        // orang["alamat"] = "Bandung";
+        // orang["umur"] = "19";
+
+        console.table(orang);
+
+        delete orang["umur"];
+
+        console.table(orang);
+
+        // kode mengakses property objek
+        console.info(`nama :${orang["nama lengkap"]}`);
+        console.info(`nama :${orang.alamat}`);
+        console.info(`nama :${orang.umur}`);
+        console.table(orang);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const sayHello = (name) => {
+        //     const say = `Hello ${name}`;
+        //     console.info(say);
+        // }
+        // sayHello("Rafli")
+
+        // versi simpel dan jika sederhana
+        // const sayHello = (name) => console.info(`Hello ${name}`);
+        // sayHello("rafli");
+
+        // jika parameternya hanya satu bisa lebi simpel lagi ges tanpa kurung pun bisa
+        const sayHello = name => console.info(`Hello ${name}`);
+        sayHello("rafli");
+
+        // const sum = (first, seccond) => {
+        //     return first + second;
+        // }
+        // versi simpel
+
+        const sum = (first, second) => first + second;
+        console.info(sum(100, 100));
+
+            function giveMeName(callback){
+                callback("Rafli");
+            }
+            // anonymus function
+            // giveMeName(function(name){
+            //     console.info(`Hello ${name}`);
+            // })
+
+            // arrow function
+            giveMeName(name => console.info(`Hello ${name}`))
+    </script>
+</body>
+</html>

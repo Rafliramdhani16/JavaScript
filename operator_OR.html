@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.info("Hello" || "");
+        // maka yang diambil yang kiri maka true dek
+
+        console.info("" || []);
+        // karna keduaya false maka aray yang akan muncul
+
+        console.info("0" || "NOL");
+        // karna string 0 maka true tapi bila number tida pakai string itu false
+
+        console.info(0 || "NOL");
+        // maka hasilnya adalah NOL
+
+        console.info(null || "NULL");
+        // maka hasil ini adalah string NULL
+
+        console.info(undefined || "UNDIFINED");
+        // maka string UNDIFINED TRUE
+
+        const person ={
+            firstname: "Rafli",
+            lastname: "Ramdhani"
+        };
+
+        const name = person.firstname || person.lastname;
+        console.info(name);
+    </script>
+</body>
+</html>

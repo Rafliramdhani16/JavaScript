@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function anonymus variable
+        const say = function(name){
+            document.writeln(`<p>Hallo${name}</p>`);
+        }
+        say("RAFLI");
+        say("UDIN");
+
+        function giveMeName(callback){
+            callback(Rafli);
+        }
+        giveMeName(say);
+        giveMeName(function(name){
+            document.writeln(`<p>Hi ${name}</p>`)
+        });
+        // kalo semisal ada variable selanjutnya tambahkan koma
+    </script>
+</body>
+</html>
