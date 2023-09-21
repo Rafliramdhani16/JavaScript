@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+
+        }
+
+        class Manager extends Employee{
+
+        }
+        const budi = new Employee();
+        const rafli = new Manager();
+
+        console.info(typeof budi);
+        console.info(typeof rafli);
+
+        // jika hasilnya true seperti budi Employee maka bernilai true jika tidak ya false
+        console.info(budi instanceof Employee)
+        console.info(budi instanceof Manager)
+
+        // karena di extends jadi bergabung dengan employee atau disebut  turunan employee
+        console.info(rafli instanceof Employee) 
+        console.info(rafli instanceof Manager)
+        </script>
+</body>
+</html>

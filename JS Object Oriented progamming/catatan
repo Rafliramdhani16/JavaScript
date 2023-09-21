@@ -1,0 +1,214 @@
+pengenalan Object Oriented Progamming
+object oriented Progamming adalah sudut pandang bahasa pemograman yang berkonsep"object"
+ada banyak sudut pandang bahasa pemograman, namun OOP adalah yang sangat populer saat ini.
+ada beberapa istilah yang perlu dimegerti dalam OOP, yaitu: Object dan Class
+
+apa itu object
+object adalah data yang berisi field/property/ atributes dan method/ function/ behavior
+
+apa itu class?
+class adalah blue print, prototype atau cetakan untuk membuat object
+class berisikan deklarasi semua properties dan function yang dimiliki oleh object
+setiap object selalu dibuat class
+dan sebuah class bisa membuat object tanpa batas
+
+OOP di JS 
+JavaScript sendiri sebenernya sejak awal dibuat sebagai bahasa prosedural, bukan bahasa pemograman berorientasi objek
+oleh karena, implementasi OOP di JavaScript memang tidak seditail bahasa pemograman lain yang memang dari awal merupakan bahasa pemogramn OOP seperti java atau C++
+
+membuat object
+sebenernya kita sudah belajar tipe data object, dengan cara membuat variable dengan tipe data object
+namun pembuatan object menggunakan tipe data object, akan membuat object yang selalu unik, sedangkan dalam OOP, biasanya kita akan membuat object dengan karakteristik yang sama berkali kali, tanpa  harus mendeklarasikan object berkali kali seperti menggunakan tipe data object
+
+Membuat Constructor Function
+sebelum EcmaScript versi 6, pembuatan class, biasanya menggunakan function. hal ini dikarenakan sebenernya JavaScript bukanlah bahasa pemograman yang fokus ke OOP
+untuk membuat class di JavaScript lama, kita bisa membuat function
+function ini kita sebut dengan constructor function
+
+Membuat Object dari Constructor Function
+Setelah kita membuat class, jika kita ingin membuat object dari class tersebut, kita bisa menggunakan kata kunci new, lalu diikuti dengan nama constructor functionnya
+
+Property di Constractor Function
+sebenernya setelah kita membuat object, kita bisa dengan mudah menambahkan property ke dalam object tersebut hanya dengan menggunakan nama variablenya, diikuti tanda titik dan nama property
+namun jika seperti itu, alhasil, constractor function function, kita bisa menggunakan kata kunci this lalu diikuti dengan nama propertynya
+
+Method di constructor Function
+sama seperti tipe data object biasanya, kita juga bisa menambahkan method di dalam constructor function
+jika kita tambahkan method di constructor function , secara otomatis object yang dibuat akan memiliki method tersebut 
+
+Parameter di constructor Function
+karena dalam JavaScript, class adalah terbentuk function, jadi secara default, function tersebut bisa memiliki parameter
+constructor function sama seperti function biasanya, bisa memiliki parameter, hal ini membuat ketika kita membuat object, kita bisa mengirim langsung data lewat parameter di constructor function tersebut
+
+constractor Inheritance
+dalam constructor kita biasanya membuat property baik itu berisi value ataupun function
+di dalam constructor, kita bisa memanggil constructor lain, dengan begitu kita bisa mewarisi semua property yang dibuat di constructor lain tersebut
+untuk memanggil constructor lain, kita bisa menggunakan NamaConstructor.call(this,parameter)
+
+prototype
+JavaScript sebelumnya dikenal dengan pemograman berbasis prototype
+memang aga sedikit membingungkan dan tidak dipungkiri, banyak sekali yang binggung dengan konsep prototype di JavaScript
+pada chapter ini kita akan bahas tentang konsep prototype.
+
+prototype Inheritance
+saat kita membuat object dari constractor function object tersebut disebut instance, 
+semua property(baik itu value atau method) akan berada di dalam instansce objectnya.
+setiap kita membuat sebuah constractor function , maka secara otomatis akan dibuatkan propertynya, 
+misal ketika kita membuat sebuah constractor function person, maka akan ada Person.property.
+saat kita membuat sebuah object instance, secara otomatis object tersebut adaklah trurunan dari Constructor.propertynya.\
+untuk mengakses property milih sebuah instance, kita bisa menggunakan_proto_
+
+Menambah property ke prototype
+property mirip object, dimana kita bisa menambahkan property baikitu value ataupun method.
+saat kita menambahkan sebuah property ke prototype, secara otomatis,
+semua object instance yang turunan dari prototype tersebut memiliki property tersebut.
+
+Cara kerja prototype Inheritance
+bagaimana bisa property di prototype bisa diakses dari object instance?
+ketika kita mengakses property di object instance, pertama akan di cek apakah di object tersebut terdapat property atau tidak,
+jika tidak, maka akan di cek di _proto_(prototype)nya, jika  masih tidak ada,
+akan di cek lagi di_proto_ yang lebih tinggi, begitu seterusnya,
+sampai berakhir di object prototype
+
+prototype Inheritance
+sekarang kita sudah tahu, bahwa prototype selalu memiliki parent, artinya dia adalah turunan,
+parent tertinggi adalah object prototype.
+pertanyannya bagaimana jika kita ingin melakukan Inheritance ke prototype lain?
+Hal ini juga bisa dilakukan, namun aga sedikit tricky, karena hal ini, sebenernya javaScript modern,
+tidak direkomendasikan lagi praktek OOP menggunakan prototype, 
+karena di EcmaScript6 sudah dikenalkan kata kunci class yang akan dibahas di chapter tersendiri
+
+kata kunci class
+Membuat classsejak EcmaScript versi 6, diperkenalkan kata kunci baru, yaitu class, ini merupakan kata kunci yang digunakan membuat class di javaScript
+dengan kata kunci class, kita tidak perlu lagi menggunakan constractor untuk membuat class
+
+constructor di class
+karena bentuk constructor function mirip dengan function, jadi kita bisa menambah parameter pada constructor function
+,lantas bagaimana dengan class?
+di class juga kita bisa menambahkan constructor, dimana dengan menggunakan constructor, kita juga bisa menambah parameter saat pertama kali membaut objectnya.
+untuk membuat constructor di class, kita bisa menggunakan kata kunci constructor
+
+property di class sama seperti pada constructor function, dalam class pun kita bisa menambahkan property
+karena hasil kahirnya adalah sebuah object, jadi menambahkan property di class bisa juga dilakukan di intance objectnya.
+
+method di classmembuat method di class sebenernya bisa dilakukan dengan cara seperti menambahkan method constructor function
+Namun, hal tersebut sebenernya menambahkan method ke dalam instance object.
+Khusus untuk method sebaiknya kita menambahkan ke prototype, bukan ke instance object.
+untungnya di class, ada cara mudah menambahkan method dan secara otomatis ditambahkan ke prototype.
+
+class Inheritance
+sebelumnya kita sudah tahu bahwa prototype mendukung pewarisan, walaupun agak sedikit tricky cara pembuatannya.
+untungnya diperbaiki di ES6 dengan fitur classnya.
+sebauh class bisa melakukan pewarisan dari class lainnya dengan menggunakan kata kunci extends.
+di JavaSCript, class inheritance sama seperti prototype inheritance, hanya bisa memiliki satu parent class.
+
+super constructor
+class inheritance sifatnya seperti prototype inherintance.
+bagaimana dengan constructor inherintance? sebenernya constractor inherintance hanyalah melakukan eksekusi constructor lain,
+dengan tujuan agar property di constructor lain bisa ditambahkan ke intance object ini.
+dalam kasus ini, jika kita ingin mencapai hasil yang sama, kita bisa menggunakan kata kunci super di dalam constructor
+kata kunci super digunakan untuk memanggil constructor super class
+jika di child class kita membuat constructor, maka kita wajib memanggil parent constructor, walaupun di parent tidak ada contructor.
+
+
+Super Method
+Selain digunakan untuk memanggil constructor milih parent class, kata kunci super juga bisa digunakan unutk mengakses method parent class.
+Caranya bisa menggunankan super titik nama functionnya
+Dengan kata lain, super sebenrnya adalah reference ke parent prototype, mirip seperti _proto_
+
+Getter dan Setter di class
+Class juga mendukung pembuatan getter dan Setter
+perlu diingat. getter dan setter ini akan berada di prototype, bukan di instance object
+
+class field
+Biasanya, saat kita ingin menambahkan field (prototype yang berisi value), kita biasanya tambahkan di constructor
+Namun, ada proposal di EcmaScript yang mengajukan pembuatan public class field ditempatkan diluar constructor, selvel dengan penempatan method
+Proposal ini masih belum final, namun beberapa browser sudah mendukungnya
+
+Public class field
+Dalam proposal tersebut juga disebutkan bahwa EcmaScript akan mendukung acces modifier public private
+Public artinya diakses dari luar class, dan private hanya bisa diakses dari dalam class saja
+Private class field akan kita bahas di chapter selanjutnya
+Untuk membuat public class field, kita bisa langsung buat nama field dengan value yang selevel dengan method
+Jika kita tidak memasukan value ke dalam field tersebut, artinya field tersebut memiliki value undifined
+
+private class field
+Secara default, saat kita menambahkan field, maka field tersebut bisa diakses darimanapun
+Jika ingin membuat field yang bersifat private(hanya bisa dilakukan di dalam class), kita bisa menggunakan tanda # sebelum nama field
+Ini dinamakan private class field, dan hanya diakses dari dalam saja
+
+private method
+Sama seperti field, terdapat proposal juga untuk menambahkan fitur private method di EcmaScript
+Dengan demikian, acces modifier private juga bisa digunakan di method
+Caranya sama, dengan menambahkan tanda # diawal method, maka secara otomatis method tersebut adalah private
+ingat fitur ini masih dalam tahapan, belum benar benar menjadi standar EcmaScript, jadi mungkin tidak semua EcmaScript browswser mendukung fitur ini
+
+operator instanceof
+Kadang adang ada kasus kita ingin mengecek apakah sebuah object merupakan instance dari class tertentu atau bukan
+Kita tidak bisa menggunakan operator typeof, karena object dari class, jika kita gunakan operator typeof, hasilnya adalah 'object'
+Operator instanceof akan mengahsilkan boolean, true jika benar object tersebut adalah instance objectnya, atau false jika bukan.
+
+Operator instanceof di class inheritance 
+Operator instanceof meendukung class inherintance, artinya instanceof juga bisa digunakan untuk mengecek, apakah sebuah objeck adalah instance dari class tertentu,
+atau turunan dari class tertentu
+
+Kata kunci static
+Static adalah kata kunci yang bisa kita tambahkan sebelum field atau method, biasanya ketika kita membuat field atau method,
+maka secara otomatis field akan menjadi property instance object, dan method akan menjadi function di prototype
+jika kita tambahkan static, maka hal itu tidak terjadi.
+
+Static class field
+Jika kita tamabahkan static dalam class field, secara otomatis field tersebut bukan lagi milik instance object, melainkan milik classnya itu sendiri
+Biasanya static digunakan jika kita ingin membuat ultility field atau function
+Cara mengakses static class field pun tidak lagi lewat object, melainkan lewat classnya
+Static class field bisa diartikan sifatnya global, tidak peduli diakses diamana atau siapa yang mengakses, hasilnya akan sama.
+
+Static Method
+Kata kunci static juga tidak hanya bisa ditambahkan di field, tapi juga di method
+Jika kita tambahkan dimethod, artinya method tersebut jadi milik classnya, bukan prototype
+Dan untuk mengakses method tersebut, kita juga bisa lakukan seperti mengakses static class field
+
+Error
+Saat membuat aplikasi, sudah tentu kita tidak akan terhindar dari yang namanya Error 
+Di javaScript, error merupakan sesuatu yang sudah standar
+Banyak sekali class erro di javaScript, namun semua class error di JavaSCript selalu berujung di class Error,
+artinya error adalah superclass untuk semua jenis error di javaScript
+
+Throw Error 
+Saat kita membuat instance object dari class error, tidak lantas otomatis terjadi error
+Kita perlu memberitahu program kita, bahwa kita akan mentriger sebuah kode error terjadi, atau istilahnya adalah melempar error(Throw Error)
+Untuk melempar error, kita bisa gunakan kata kunci throw, diikuti dengan instance object errornya
+Jika terjadi Error, maka otomatis kode pemograman kita akan terhenti, dan bisa melihat detail errornya di consolen diaplikasi browser kita
+
+Error Handling
+Saat terjadi error di kode program JavaSCript, kadang kita tidak ingin program kita berhenti
+Di javaScript, kita bisa menangkap jika terjadi error
+Kita bisa menggunakan try catch statement untuk menangkap error
+Pada block try, kita akan mencoba mengakses kode program yang bisa menyebabkan error, dan jika terjadi error,
+block try akan berhenti dan otomatis masuk ke block catch
+Jika tidak terjadi error, block catch tidak akan dieksekusi.
+
+Kata kunci finaly
+Kadang kita ingin melakukan sesuatu entah itu terjadi error ataupun tidak
+Dalam try catch, kita bisa menambahkan block finaly
+Block finaly ini akan selalu dieksekusi setalah try catch selesai, entah terjadi error ataupun tidak, block finaly akan selalu dieksekusi
+
+Try finaly
+Kata kunci finaly juga bisa digunakan tanpa perlu menggunakan catch
+biasanya ini digunakan dalam kasus tertentu
+
+Walaupun JavaScript sudah memiliki standard class error
+Namun alangkah baiknya, kita membedakan tiap jenis error
+Untuk membuat error sendiri secara manual sangatlah mudah, cukup membuat class turunan dari class Error
+Dan jangan lupa tambahkan parameter message, agar bisa dikirimkan ke parameter di constructor class error
+
+Itrable dan iterator
+Salah satu fitur terbaru di EcmaScript adalah Itrable
+Itrable adalah spesial object yang memiliki standarirasasi
+Dengan mengikuti standarirasasi itrable, secara otomatis kita bisa melakukan iterasi terdapat data tersebut dengan menggunakan perluang for of
+contoh yang sudah mengikuti standarisasi itrable adalah string, array, object dan lain-lain
+
+Cara Kerja Itrerable dan iterator
+Jika kita mengikuti kontrak itrable, maka object yang kita buat akan dilakukan iterasi menggunakan for...of
+Setiap kita melakukan perulangan, object Iterator akan dibuat
+Hal ini menjadi aman jika kita melakukan iterasi berulang-ulang, karena iterator baru akan dibuat terus menerus
