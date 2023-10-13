@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            //create regex
+            const regex1 = /rafli/;
+            const regex2 = new RegExp("rafli");
+            const regex3 = new RegExp(/rafli/);
+        }
+        {
+            const name = "rafli ramdhani gimang budy";
+            const regex = /rafli/;
+
+            const result = regex.exec(name);
+            console.info(result);
+            console.info(regex.exec("tidak ada"));
+
+            const test = regex.test(name);
+            console.info(test);
+            console.info(regex.test("tidak ada"));
+
+        }
+        {
+            //regex modifier
+
+            const name = "Rafli Ramdhani\nRafli Geming\nEdi Ramdhani";
+            //agar tanda yang pertama ^
+            const regex1 =/^Rafli/g
+            const regex2 = /ramdhani/ig
+
+            let result;
+            while((result = regex1.exec(name)) !== null){
+                console.info(result);
+            }
+            
+            while((result = regex2.exec(name)) !== null){
+                console.info(result);
+            }
+        }
+        {
+            //advance regex
+            const regex = /ek[aiueo]/ig
+
+            const name = "eka eko eki eku eke edo eko eki";
+            let result;
+            while((result = regex.exec(name)) !== null){
+                console.info(result);
+            }
+        }
+
+        {
+            const name = "eka eko eki eku eke edo eko eki";
+
+            console.info(name.match(/ek[aiueo]/ig));
+            console.info(name.search(/ek[aiueo]/ig));
+            console.info(name.replace(/ek[aiueo]/i, "kamu"));
+            console.info(name.replaceAll(/ek[aiueo]/ig, "kamu"));
+            console.info(name.split(/e[aiueo]/ig));
+            
+
+        }
+    </script>
+</body>
+</html>

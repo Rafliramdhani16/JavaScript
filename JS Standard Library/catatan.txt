@@ -1,0 +1,111 @@
+Number
+Number itu merupakan function yang digunakan untuk melakukan konversi ke tipe data Number
+Jika data tidak bisa di konversi ke number, secara otomatis hasilnya adalah NaN
+
+Number Static Properties
+Number memiliki banyak static Properties seperti:
+Number.MIN_VALUE untuk mendapatkan number minimal
+Number.MAX_VALUE untuk mendapatkan number maksimal
+
+Number Static Method
+Number memiliki banyak static method, seperti:
+Number.isNaN(value) untuk mengecek apakah value NaN atau bukan\
+Number.isInteger(value) untuk mengecek apakah value berupa Integer atau bukan
+
+Number Instance Method
+Number memiliki banyak Instance method, seperti:
+Number.toLocalString(locale)untuk mengubah number menjadi string sesuai locale:
+Number.toString(radix) untuk mengubah number menjadi String sesuai radix
+info tambahan radix itu mau format apa bisa binary,hexa,desimal dan lainya
+locale itu format bahasa(id-ID)kiri itu bahasa dan kanan adalah negara
+
+String
+Namun kita belum membahas instance method atau juga instance Properties yang terdapat pada string
+String sendiri memiliki banyak sekali instance method dan Properties
+Hal ini menjadikan untuk memanipulasi data string sangat mudah di JavaScript
+, seperti mengubah manjdi lowercase,Uppercase, memotong string menjadi array dan lain-lain
+
+Array 
+Array Loop
+Sebelumnya kira bisa menggunakan for in dan for off untuk melakukan iterasi array, namun array juga memiliki method yang bernama forEach()
+Method forEach bisa digunakan juga untuk melakukan iterasi dat array
+
+Array Queue
+Dalam, structur data, terdapat tipe structur data bernama queue(antrian)
+Diamana data masuk akan diposisikan urutan paling belakang
+Sedangkan data keluar akan diposisikan dari urutan paling depan
+Mirip sekali dengan antrian, atau istilahnya FIFO(first in first out)
+Kita bisa menggunakan array dengan bantuan function push() untuk menambahkan data di belakang,
+dan shift() untuk mengambil dan menghapus data paling depan
+
+Array Stack
+Strucktur data stack(tumpukan) kebalikan dari queue, dimana aturannya mirip dengan tumpukan kartu
+Saat kita memasukan data, kita akan mengambil data paling belakng(atau atas)
+Sedangkan saat menagambil data, kita akan mengambil data paling belakang (atau atas) terlebih dahulu
+stack ini sifatnya LIFO(last in first out)
+Untuk mengubah diurutan belakang, kita bisa menggunakan function push()
+Dan untuk mengambil dan menghapus paling belakang, kita bisa menggunakan function pop()
+
+Array search
+array memiliki banyak function untuk melakukan pencarian
+
+function                                                    Keterangan
+find(value=>boolean): value                                 Mencari data sesuai dengan kondisi
+findIndex(value=> boolean): number                          Mnecari data index sesuai dengan kondisi
+includes(value): boolean                                    Mengecek apakah terdapat data
+indexOf(value): number                                      Mengecek posisi index data
+lastIndexOf(value): number                                  Mengecek posisi index data terakhir
+
+Array Filter
+Array filter memiliki function untuk melakukan filter data
+Function                                Keterangan
+filter(value=>boolean): Array           Melakukan filter data yang kondisinya bernilai true
+
+Array Transform
+
+Array juga memiliki function yang digunakan untuk melakukan transformasi
+Function                                        Keterangan
+
+map(value=>result):array<result>                Melakukan Transform tiap value dan mengahsilkan array result
+
+reduce(resultBefore,value=>result):result       Melakukan transform dengan menggunakan value array dan value selanjutnya
+                                                ,lalu hasilnya dilanjutkan ke iterasi selanjutnya
+
+reduceRight(resultBefore,value => result)       sama seperti reduce(), namun dilakukan dari belakang
+
+
+Object
+tipe data object sudah kita sering sekali dibahas di javascript dasar dan oop
+pada materi ini kita membahas banyak method yang terdapat pada array
+
+Obejct freeze dan seal 
+secara default, object bisa diubah atau dihapus Propertiesnya
+jika ingin mengubah sebuah object menjadi object yang tidak bisa diubah atau dihapus, kita bisa menggunakan beberapa static method
+Object.freeze() digunakan untuk mengubah object menjadi object yang tidak bisa diubah atau dihapus attributenya
+objectseal() digunakan untuk mengubah object menjadi object yang tidak bisa dihapus di attributenya
+
+Object Assign
+Kadang kita ada kasus menggabungkan semua attribute dari sebuah object ke object lain
+Hal ini kita bisa lakukan dengan menggunakan Object.Assign(target,source)
+
+Object propery name dan value
+Object juga memiliki static method untuk digunakan mengambil semua properties names dan values
+Obejct.values() digunakan untuk mengambil semua property value
+Object.getPropertyName()digunakan untuk mengambil semua properti name
+
+Pengenalan JSON
+JSON singkatan dari Java Script Object Nation
+JSON merupakan data stting yang bentuknya mirip dengan javascript object
+saat ini JSON banyak digunakan untuk komunikasi antara server dan client
+
+JSON
+JavaScript mendukung konversi data dari string json ke Object ataupun sebaliknya
+JSON.stringfy() digunakan untuk melakukan konversi dari object ke string
+JSON.parse() digunakan untuk melakukan konversi dari string ke object
+
+BigInt
+BigInt merupakan tipe data number yang bisa mencakup data angka lebih dari Number.MAX_SAFE_INTEGER
+Untuk kasus number yang lebih dari itu, sangat disarankan menggunkan tipe data BigInt
+Cara penggunaan BigInt sama aja dengan penggunaan Number dan juga operatornya
+
+

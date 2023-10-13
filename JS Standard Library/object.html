@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+{
+    // freeze dan seal
+    const person = {
+            firstName: "Rafli",
+            lastName: "Ramdhani"
+        };
+        Object.freeze(person);
+        // hanya bisa update datannya tidak bisa menghapus dan tidak bisa di tambah propertynya
+        // Object.seal(person);
+        person.firstName ="Budi";
+        delete person.lastName;
+
+        console.info(person);
+}
+{
+    //object assign
+    const target = {
+        firstName:"Rafli"
+    };
+
+    //jika ada yang sama di target maka akan di timpa contoh fisrtnamenya ada 2 maka yang source yang akan dimasukan
+    const source = {
+        lastName: "Ramdhani"
+    };
+
+    Object.assign(target,source);
+    console.info(target);
+    console.info(source);
+}
+{
+    //obejct property name dan value
+    const person ={
+        firstName: "Rafli",
+        lastName: "Ramdhani"
+    };
+
+    console.info(Object.values(person));
+    console.info(Object.getOwnPropertyNames(person));
+}
+
+    </script>
+</body>
+</html>
