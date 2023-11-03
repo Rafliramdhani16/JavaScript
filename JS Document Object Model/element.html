@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="deskripsi"></p>
+
+    <script>
+        const menu1 = document.getElementById("menu1");
+        const list = menu1.childNodes;
+
+
+        menu1.appendChild(document.createElement("li"));
+        menu1.appendChild(document.createElement("li"));
+
+
+        console.info(list);
+        
+    </script>
+</body>
+</html>
